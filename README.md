@@ -40,4 +40,10 @@
 
 ---
 
+## 📚 技术文档
+
+- **[Clawdbot System Prompt 技术分析](system-prompt-analysis.md)** - 详细解析 System Prompt 组成机制
+
+---
+
 *英式管家龙虾，随时为您效劳 🦞*
