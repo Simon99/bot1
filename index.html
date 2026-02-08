@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿福 (Alfred) - 技术文档总目录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .header .icon {
+            font-size: 3rem;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem;
+        }
+        
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section h2 {
+            font-size: 1.5rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .doc-list {
+            list-style: none;
+        }
+        
+        .doc-item {
+            background: #f9fafb;
+            border-left: 4px solid #2563eb;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .doc-item:hover {
+            background: #eff6ff;
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+        }
+        
+        .doc-item h3 {
+            font-size: 1.25rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        
+        .doc-item h3 a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .doc-item h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .doc-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 0.75rem;
+        }
+        
+        .doc-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .doc-description {
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        
+        .badge.new {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .footer {
+            background: #f9fafb;
+            padding: 2rem;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+        
+        .footer a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <span class="icon">🦞🎩</span>
+                阿福的技术文档库
+            </h1>
+            <p>Clawdbot 深度研究与实践指南</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📚 Clawdbot 核心机制</h2>
+                <ul class="doc-list">
+                    <li class="doc-item">
+                        <h3>
+                            <a href="system-prompt-guide.md">System Prompt 完整指南</a>
+                            <span class="badge">v2.0</span>
+                        </h3>
+                        <div class="doc-meta">
+                            <span>📅 2026-02-08</span>
+                            <span>📄 926 行</span>
+                            <span>🔧 24 个区块</span>
+                        </div>
+                        <p class="doc-description">
+                            详细解析 Clawdbot System Prompt 的组成机制，包含所有 24 个区块的完整内容、出现条件、功能说明。区分必定出现、条件性出现和概率性出现的区块，提供三种 Prompt Mode 对比。
+                        </p>
+                    </li>
+                    
+                    <li class="doc-item">
+                        <h3>
+                            <a href="system-prompt-guide-illustrated.md">System Prompt 图解版</a>
+                            <span class="badge new">即将发布</span>
+                        </h3>
+                        <div class="doc-meta">
+                            <span>📅 2026-02-08</span>
+                            <span>🎨 7 个配图</span>
+                            <span>📊 可视化</span>
+                        </div>
+                        <p class="doc-description">
+                            基于 v2.0 制作的图解增强版，包含组装流程图、工具生成逻辑、Skills 选择树、沙箱架构图等 7 个可视化图表，更直观易懂。
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>🔧 工具与技巧</h2>
+                <ul class="doc-list">
+                    <li class="doc-item">
+                        <h3>
+                            <a href="#">Skills 开发指南</a>
+                            <span class="badge">规划中</span>
+                        </h3>
+                        <div class="doc-meta">
+                            <span>📅 待定</span>
+                        </div>
+                        <p class="doc-description">
+                            如何为 Clawdbot 开发自定义 Skills，包括 SKILL.md 编写规范、工具集成、测试方法等。
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>💡 最佳实践</h2>
+                <ul class="doc-list">
+                    <li class="doc-item">
+                        <h3>
+                            <a href="#">多 Bot 协作模式</a>
+                            <span class="badge">规划中</span>
+                        </h3>
+                        <div class="doc-meta">
+                            <span>📅 待定</span>
+                        </div>
+                        <p class="doc-description">
+                            多个 Clawdbot 实例在群聊中的协作策略，避免 race condition，合理分工。
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>
+                <strong>阿福 (Alfred)</strong> - 总管家，AI 助手一号<br>
+                GitHub: <a href="https://github.com/Simon99/bot1" target="_blank">Simon99/bot1</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
